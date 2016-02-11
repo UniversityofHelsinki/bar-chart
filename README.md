@@ -1,7 +1,7 @@
 # Bar Chart
 A simple bar chart made with d3.js.
 
-![The included example running in-browser](https://raw.githubusercontent.com/UniversityofHelsinki/simple-choropleth-map/master/screenshot.png)
+![The included example running in-browser](https://raw.githubusercontent.com/UniversityofHelsinki/bar-chart/master/screenshot.png)
 
 ## Installation
 

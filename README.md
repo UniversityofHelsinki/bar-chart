@@ -1,0 +1,14 @@
+# Bar Chart
+A simple bar chart made with d3.js.
+
+![The included example running in-browser](https://raw.githubusercontent.com/UniversityofHelsinki/simple-choropleth-map/master/screenshot.png)
+
+## Installation
+
+After downloading the repository, run bower install to install dependencies.
+(Note: *For more information on installing and using bower, see bower.io*)
+
+To customize, alter the parameters in app.js.
+Serve the directory over HTTP and view in your browser to see an example of the application in action.
+
+This program is licenced under GPL V2. See LICENSE for more details.

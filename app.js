@@ -13,6 +13,8 @@ var filePath = "sampledata.tsv";
 var xName = "Year";
 var yName = "Publications"
 
+
+
 /* ********** */
 
 var margin = {top: 50, right: 20, bottom: 60, left: 60},
@@ -50,7 +52,7 @@ svg.append("text")
   .attr("x", width/2)
   .attr("y", -30)
 
-var tooltip = d3.select(selector).append("div")
+var tooltip = svg.append("text")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -63,8 +65,6 @@ function type(d) {
 var data = d3.dsv(";", "text/plain")(filePath, type, function(error, data) {
   x.domain(data.map(function(d) { return d[xName]; }));
   y.domain([0, d3.max(data, function(d) { return d[yName]; })]);
-
-  tooltip.style("width", x.rangeBand() + 'px')
 
   svg.append("g")
     .attr("class", "x axis")
@@ -96,9 +96,9 @@ var data = d3.dsv(";", "text/plain")(filePath, type, function(error, data) {
       });
 
   barGroups.on("mouseover", function(d) {
-    tooltip.html(d[yName])
-      .style("left", margin.left + x(d[xName]) + 'px')
-      .style("top", margin.top - 10 + y(d[yName]) + 'px')
+    tooltip.text(d[yName])
+      .attr("x", (x(d[xName]) + x.rangeBand()/2) + 'px')
+      .attr("y", -10 + y(d[yName]) + 'px')
       .transition()
       .duration(300)
       .style("opacity", .9)

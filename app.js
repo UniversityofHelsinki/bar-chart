@@ -13,9 +13,7 @@ var filePath = "sampledata.tsv";
 var xName = "Year";
 var yName = "Publications"
 
-
-
-/* ********** */
+/* * */
 
 var margin = {top: 50, right: 20, bottom: 60, left: 60},
     width = 500 - margin.left - margin.right,
